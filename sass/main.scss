@@ -1,0 +1,24 @@
+// Utils
+@import './utils/variables';
+
+// Base
+@import './base/common';
+@import './base/container';
+
+// Utils
+@import './utils/visually-hidden';
+
+// Components
+@import './components/backdrop';
+@import './components/modal-windov';
+@import './components/form';
+
+// layout
+@import './layout/header';
+@import './layout/hero';
+@import './layout/feature';
+@import './layout/works';
+@import './layout/teams';
+@import './layout/clients';
+@import './layout/footer';
+@import './layout/portfolio';
