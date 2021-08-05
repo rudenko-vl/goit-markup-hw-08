@@ -527,31 +527,6 @@ body {
   }
 }
 
-.burger-btn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0px;
-  line-height: 0px;
-}
-
-.burger-icon {
-  fill: #000000;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.burger-icon:hover, .burger-icon:focus {
-  fill: var(--accent-color);
-}
-
-@media screen and (min-width: 768px) {
-  .burger-btn {
-    display: none;
-  }
-}
-
 .hero {
   background-color: #2f303a;
   text-align: center;
@@ -1392,5 +1367,87 @@ body {
   .item-card {
     flex-basis: calc(100% / 3 - 30px);
   }
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+  line-height: 0px;
+}
+
+.burger-icon {
+  fill: #000000;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-icon:hover, .burger-icon:focus {
+  fill: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.mob-menu-item, .mob-contact-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu-link:hover, .mob-menu-link:focus {
+  color: var(--accent-color);
+}
+
+.mob-contact-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--second-color);
+  transition-property: color, font-size;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-contact-link:hover, .mob-contact-link:focus {
+  color: var(--accent-color);
+  font-size: 34px;
+}
+
+.mob-social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mob-social-list {
+  display: flex;
+}
+
+.mob-social-item:not(:last-child)::after {
+  content: "";
+  width: 0px;
+  height: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
