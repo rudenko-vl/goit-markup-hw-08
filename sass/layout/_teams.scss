@@ -2,30 +2,20 @@
   background-color: #f5f4fa;
   &-content {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
   }
   &__title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--main-color);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
-    text-align: center;
-  }
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--card-set-gap));
-    margin-top: calc(-1 * var(--card-set-gap));
+    margin-bottom: 30px;
     text-align: center;
   }
   &__item {
-    flex-basis: calc(100% / 4 - var(--card-set-gap));
-    margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap);
     background-color: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -38,6 +28,7 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--main-color);
+    text-align: center;
   }
   &__position {
     font-size: 16px;
@@ -45,15 +36,13 @@
     letter-spacing: 0.03em;
     color: var(--second-color);
     margin-top: 10px;
+    text-align: center;
   }
 }
-
 .social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
   &-item {
     width: 44px;
     height: 44px;
@@ -78,5 +67,43 @@
   &:focus {
     background-color: var(--accent-color);
     fill: #ffffff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .social-list-item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__list {
+    margin: -15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__item {
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item:not(:last-child) {
+    margin-right: 30px;
   }
 }

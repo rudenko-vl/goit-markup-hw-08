@@ -25,6 +25,30 @@
     border-radius: 4px;
   }
 }
+.menu-filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .menu-filter {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-filter {
+    margin-bottom: 50px;
+  }
+}
+
+.item-filter:not(:last-child) {
+  margin-right: 8px;
+  margin-bottom: 15px;
+}
 .card {
   &-name {
     font-weight: 700;
@@ -38,11 +62,14 @@
     padding: 20px 24px;
     border: 1px solid #eeeeee;
     border-top: none;
+    flex-grow: 1;
   }
 }
 
 .item-card-wrapper {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   &:hover .overlay,
   &:focus .overlay {
     transform: translateY(0%);
@@ -79,31 +106,8 @@
   color: var(--second-color);
 }
 
-.menu-filter {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-  text-align: center;
-  justify-content: center;
-}
-
-.item-filter:not(:last-child) {
-  margin-right: 8px;
-}
-
-.list-card {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
-}
-
 .item-card {
-  flex-basis: calc(100% / 9 - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  margin-top: 30px;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -114,3 +118,61 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
+@media screen and (max-width: 767px) {
+  .item-card {
+    margin-top: 30px;
+  }
+}
+
+// -------------tablet----------
+
+@media screen and (min-width: 768px) {
+  .list-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .item-card {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .item-card {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+// @media screen and (min-width: 768px) and (max-width: 1199px) {
+//   .list-card {
+//     margin: -15px;
+//   }
+// }
+
+// @media screen and (min-width: 768px) and (max-width: 1199px) {
+//   .item-card {
+//     flex-basis: calc((100% - 60px) / 2);
+//     margin: 15px;
+//   }
+// }
+
+// ----------------desktop------------
+
+// @media screen and (min-width: 1200px) {
+//   .list-card {
+//     margin-right: -30px;
+//     margin-bottom: -30px;
+//   }
+// }
+// @media screen and (min-width: 1200px) {
+//   .item-card {
+//     flex-basis: calc((100% - 60px) / 3);
+//     margin-right: 30px;
+//     margin-bottom: 30px;
+//   }
+// }

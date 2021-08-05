@@ -1,13 +1,24 @@
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ececec;
   &-container {
     display: flex;
     align-items: center;
   }
 }
-
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
 .menu {
   display: flex;
   align-items: center;
@@ -22,7 +33,12 @@
 }
 
 .logo {
-  margin-right: 95px;
+  margin-right: auto;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
   &-studio-bottom {
     color: #ffffff;
   }
@@ -33,18 +49,13 @@
   &-web-bottom {
     color: var(--accent-color);
   }
-  &-web-top,
-  &-web-bottom,
-  &-studio-top,
-  &-studio-bottom {
-    font-family: var(--secondary-font);
-    font-weight: 700;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
     font-size: 26px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
   }
 }
-
 .navigation-list {
   color: var(--main-color);
   font-weight: 500;
@@ -89,9 +100,6 @@
 }
 
 .contact-link {
-  display: flex;
-  align-items: center;
-  margin-right: 30px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -102,8 +110,6 @@
   }
 }
 .tel-link {
-  display: flex;
-  align-items: center;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -115,13 +121,87 @@
 }
 .icon {
   &-tel {
-    margin-left: auto;
     margin-right: 10px;
     fill: currentColor;
   }
   &-mail {
-    margin-left: auto;
     margin-right: 10px;
     fill: currentColor;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu-contact {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-link {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .tel-link {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu-contact-item {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-contact {
+    display: flex;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-link,
+  .tel-link {
+    display: flex;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-link {
+    margin-right: 30px;
+  }
+}
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+  line-height: 0px;
+}
+.burger-icon {
+  fill: #000000;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
   }
 }
