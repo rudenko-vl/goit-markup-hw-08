@@ -54,13 +54,14 @@
             >
           </li>
         </ul>
-        <!-- <button class="menu-toggle js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu" >
+        <button class="menu-toggle" type="button" data-menu-open>
           <svg class="burger-icon" width="40px" height="40px">
                 <use href="./images/sprite.svg#hamburger"></use></svg
               >
         </button>
-        <div class="menu-container js-menu-container" id="mobile-menu">
-          <button class="menu-toggle js-close-menu" type="button">
+        <div class="mobile-menu" data-menu>
+          <div class="mob-container">
+          <button class="close-mob-btn" type="button" data-menu-close>
             <svg class="burger-icon" width="40px" height="40px">
                 <use href="./images/sprite.svg#hamburger-close"></use></svg
               >
@@ -86,7 +87,8 @@
           </ul>
           </div>
         </div>
-      </div> -->
+        </div>
+      </div>
     </header>
     <main>
       <!--Секция hero-->
@@ -518,9 +520,8 @@
                 </svg></button>
     
                 <!-- Form -->
-
+                <p class="modal-form-head">Оставьте свои данные, мы вам перезвоним</p>
     <form action="#" class="modal-form">
-                  <p class="modal-form-head">Оставьте свои данные, мы вам перезвоним</p>
                   <label class="modal-form-field">Имя
                     <span class="modal-form-input-wrapper">
                     <input type="text" class="modal-form-input" name="user-name" minlength="2"
@@ -557,7 +558,7 @@
                 </form>
               </div>
     </div>
-    <script defer src="js/mobile-menu.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
       <script src="./js/modal.js"></script>
   </body>
 </html>
