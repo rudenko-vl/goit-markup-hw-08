@@ -17,7 +17,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -55,6 +54,40 @@
             >
           </li>
         </ul>
+        <button class="menu-toggle" type="button" data-menu-open>
+          <svg class="burger-icon" width="40px" height="40px">
+                <use href="./images/sprite.svg#hamburger"></use></svg
+              >
+        </button>
+        <div class="mobile-menu" data-menu>
+          <div class="mob-container">
+          <button class="close-mob-btn" type="button" data-menu-close>
+            <svg class="burger-icon" width="40px" height="40px">
+                <use href="./images/sprite.svg#hamburger-close"></use></svg
+              >
+          </button>
+          <ul class="mob-menu-list list">
+            <li class="mob-menu-item"> <a class="mob-menu-link link" href="./index.html">Студия</a></li>
+            <li class="mob-menu-item"> <a class="mob-menu-link link" href="./portfolio.html">Портфолио</a></li>
+            <li class="mob-menu-item"> <a class="mob-menu-link link" href="#">Контакты</a></li>
+          </ul>
+          <div class="wrapper-mob-contact">
+            <ul class="mob-contact-list list">
+          <li class="mob-contact-item">
+            <a class="mob-contact-link link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+          <li class="mob-contact-item">
+            <a class="mob-contact-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li></ul>
+          <ul class="mob-social-list list">
+            <li class="mob-social-item"><a class="mob-social-link link" href="#">Instagram</a></li>
+            <li class="mob-social-item"><a class="mob-social-link link" href="#">Twitter</a></li>
+            <li class="mob-social-item"><a class="mob-social-link link" href="#">Facebook</a></li>
+            <li class="mob-social-item"><a class="mob-social-link link" href="#">LinkedIn</a></li>
+          </ul>
+          </div>
+        </div>
+        </div>
       </div>
     </header>
 
@@ -670,5 +703,6 @@
       </div>
       </div>
 </footer>
+<script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
