@@ -15,8 +15,8 @@
 .modal-form-field {
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 1.16;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
   color: var(--second-color);
 }
 .modal-form-input {
@@ -47,7 +47,6 @@
 .modal-form-input-wrapper {
   position: relative;
   display: block;
-  margin-top: 4px;
 }
 .modal-form-input:focus + .modal-form-icon,
 .modal-form-input:hover + .modal-form-icon {

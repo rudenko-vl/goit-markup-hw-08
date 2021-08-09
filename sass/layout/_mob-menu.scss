@@ -41,6 +41,9 @@
     color: var(--accent-color);
   }
 }
+.activ-link {
+  color: var(--accent-color);
+}
 .mob-contact-link {
   font-weight: 500;
   font-size: 24px;
@@ -56,6 +59,14 @@
     font-size: 34px;
   }
 }
+.mob-tel-link {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
 .mob-social-link {
   font-weight: 500;
   font-size: 18px;

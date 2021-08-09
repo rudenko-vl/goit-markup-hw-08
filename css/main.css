@@ -177,8 +177,8 @@ body {
 .modal-form-field {
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 1.16;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
   color: var(--second-color);
 }
 
@@ -212,7 +212,6 @@ body {
 .modal-form-input-wrapper {
   position: relative;
   display: block;
-  margin-top: 4px;
 }
 
 .modal-form-input:focus + .modal-form-icon,
@@ -348,8 +347,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 20px;
+    padding-bottom: 19px;
   }
 }
 
@@ -903,15 +902,48 @@ body {
 .clients-icon {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  margin: -15px;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .clients-item {
-  width: 170px;
+  width: 100%;
   height: 92px;
-  margin: 15px;
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc(100% / 2 - 30px);
+}
+
+@media screen and (min-width: 768px) {
+  .clients-item {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-icon {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-icon {
+    margin-top: 50px;
+  }
 }
 
 .company-logo {
@@ -937,7 +969,6 @@ body {
 @media screen and (min-width: 1200px) {
   .clients-title {
     font-size: 36px;
-    margin-bottom: 50px;
   }
 }
 
@@ -959,11 +990,11 @@ body {
 }
 
 .contact-link-footer {
-  color: var(--second-color);
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1260,7 +1291,6 @@ body {
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -1277,9 +1307,23 @@ body {
   }
 }
 
-.item-filter:not(:last-child) {
-  margin-right: 8px;
-  margin-bottom: 15px;
+@media screen and (max-width: 767px) {
+  .item-filter {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .item-filter:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .item-filter:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .card-name {
@@ -1359,6 +1403,12 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .menu-filter {
+    margin-bottom: 40px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .list-card {
     display: flex;
@@ -1431,6 +1481,10 @@ body {
   color: var(--accent-color);
 }
 
+.activ-link {
+  color: var(--accent-color);
+}
+
 .mob-contact-link {
   font-weight: 500;
   font-size: 24px;
@@ -1445,6 +1499,14 @@ body {
 .mob-contact-link:hover, .mob-contact-link:focus {
   color: var(--accent-color);
   font-size: 34px;
+}
+
+.mob-tel-link {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 .mob-social-link {
